@@ -20,3 +20,15 @@ type : `number`, default : `0`
 
 type : `Function`
 
+# Sample Usage
+
+```
+var tab = new Tab(document.querySelector('.tabs'), {
+    tab : '.tab',
+    panel : '.panel',
+    index : 1,
+    callback : function() {
+        
+    }
+});
+```
