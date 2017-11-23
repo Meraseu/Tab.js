@@ -42,11 +42,16 @@ window.Tab = (function (Tab) {
                     self.selected(index);
                     self.unSelected(self.index);
                     self.index = index;
-                    if(self.callback) {
-                        self.callback();
-                    }
                 });
             }
+        },
+        moveTo : function(index) {
+            if(index === this.index) {
+                return;
+            }
+            this.selected(index);
+            this.unSelected(this.index);
+            this.index = index;
         },
         selected : function(index) {
             var tab = this.tab[index];
@@ -55,6 +60,11 @@ window.Tab = (function (Tab) {
             tab.setAttribute('aria-selected','true');
             panel.classList.remove('hidden');
             panel.setAttribute('aria-hidden','false');
+            if (this.callback) {
+                this.callback({
+                    selectedIndex : index
+                });
+            }
         },
         unSelected : function(index) {
             var tab = this.tab[index];
