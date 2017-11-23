@@ -4,19 +4,19 @@
 
 ### Options
 
-##### tab
+#### tab
 
 type : `selector`, default : `'.tab'`
 
-##### panel
+#### panel
 
 type : `selector`, default : `'.panel'`
 
-##### index
+#### index
 
 type : `number`, default : `0`
 
-##### callback
+#### callback
 
 type : `Function`
 
