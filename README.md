@@ -1,8 +1,4 @@
-# Tab.js
-
-> Tab.js
-
-### Options
+# Options
 
 #### tab
 
@@ -19,6 +15,22 @@ type : `number`, default : `0`
 #### callback
 
 type : `Function`
+
+# Apis
+
+#### moveTo
+
+```
+var tab = new Tab(document.querySelector('.tabs'), {
+    tab : '.tab',
+    panel : '.panel',
+    index : 1,
+    callback : function() {
+        
+    }
+});
+tab.moveTo(2);
+```
 
 # Sample Usage
 
