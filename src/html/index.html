@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>    
+    <style>
+    
+    button {border: 0 none; background-color: transparent; cursor: pointer; -webkit-tap-highlight-color: rgba(255, 255, 255, 0);}
+    .tablist {z-index: 20; position: relative; overflow: hidden; width: 100%; padding-top: 3.333em; margin-bottom:-1px; font-size: 0;}
+    .tablist .tab {position: relative; display: inline-block; width: 70px; padding: .8em 1.1em; text-align: center; font-weight: bold; box-sizing: border-box; border-radius: 5px;}
+    .tablist .tab.selected {box-shadow: 0 0 0 1px #111 inset; border-radius: 5px 5px 0 0;}
+    .tablist .tab.selected::after {content: ''; position: absolute; left: 1px; bottom: 0; width: -webkit-calc((100% - 2px)); width: calc((100% - 2px)); height: 2px; background-color: #fff;}
+
+    .panel {z-index: 10; position: relative; overflow: hidden; border-top: 1px solid #111;}
+    .panel.attached {display: none;}
+    </style>
+</head>
+<body>
+    <div class="tabs">
+        <div class="tablist">
+            <button type="button" class="tab" role="tab" aria-selected="false" aria-controls="tab-panel1" id="tab1">TAB1</button>
+            <button type="button" class="tab" role="tab" aria-selected="false" aria-controls="tab-panel2" id="tab2">TAB2</button>
+            <button type="button" class="tab" role="tab" aria-selected="false" aria-controls="tab-panel3" id="tab3">TAB3</button>
+        </div>
+        <div id="tab-panel1" class="panel attached" role="tabpanel" aria-hidden="true" aria-labelledby="tab1">panel1</div>
+        <div id="tab-panel2" class="panel attached" role="tabpanel" aria-hidden="true" aria-labelledby="tab2">panel2</div>
+        <div id="tab-panel3" class="panel attached" role="tabpanel" aria-hidden="true" aria-labelledby="tab3">panel3</div>
+    </div>
+</body>
+</html>

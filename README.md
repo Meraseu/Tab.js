@@ -1,46 +1,16 @@
-# Options
+# Tab.js
 
-#### tab
+> 탭 UI 라이브러리
 
-type : `selector`, default : `'.tab'`
+## Build Setup
 
-#### panel
+``` bash
+# install dependencies
+npm install
 
-type : `selector`, default : `'.panel'`
+# serve with hot reload at localhost:8080
+npm run dev
 
-#### index
-
-type : `number`, default : `0`
-
-#### callback
-
-type : `Function`
-
-# Apis
-
-#### moveTo
-
-```
-var tab = new Tab(document.querySelector('.tabs'), {
-    tab : '.tab',
-    panel : '.panel',
-    index : 1,
-    callback : function() {
-        
-    }
-});
-tab.moveTo(2);
-```
-
-# Sample Usage
-
-```
-var tab = new Tab(document.querySelector('.tabs'), {
-    tab : '.tab',
-    panel : '.panel',
-    index : 1,
-    callback : function() {
-        
-    }
-});
+# build for production with minification
+npm run build
 ```
